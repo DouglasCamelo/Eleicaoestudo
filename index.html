@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Eleições 2024 Messias</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Inclua aqui o link para o seu arquivo CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -16,6 +16,16 @@
 
     <label for="filterParty">Filtrar por Partido:</label>
     <select id="filterParty"></select>
+
+    <!-- Formulário de login -->
+    <div class="login-container">
+        <h2>Área de Login</h2>
+        <form id="loginForm" action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Nome de Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
 
     <table id="resultsTable">
         <thead>
