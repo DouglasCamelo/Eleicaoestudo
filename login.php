@@ -1,13 +1,16 @@
 <?php
+session_start();
+
 // Verifica se o formulário de login foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verifica se o nome de usuário e senha estão corretos (coloque suas verificações aqui)
-    $username = "Camelo"; // Substitua "usuario" pelo nome de usuário correto
-    $password = "123";   // Substitua "senha" pela senha correta
+    // Verifica se o nome de usuário e senha estão corretos
+    $username = "Camelo";
+    $password = "123456";
 
     // Verifica se o nome de usuário e a senha fornecidos correspondem aos valores esperados
     if ($_POST["username"] === $username && $_POST["password"] === $password) {
         // Autenticação bem-sucedida, redireciona para a página principal
+        $_SESSION["loggedin"] = true;
         header("Location: index.html");
         exit();
     } else {
@@ -16,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
