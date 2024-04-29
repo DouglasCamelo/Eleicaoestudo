@@ -2,13 +2,21 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Eleições 2024 Messias 2</title> <!-- Alteração do título aqui -->
+    <title>Eleições 2024 Messias</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Eleições 2024 Messias 2</h1> <!-- Alteração do título aqui -->
+    <h1>Eleições 2024 Messias</h1>
+
+    <!-- Campos de filtro -->
+    <label for="filterCandidate">Filtrar por Candidato:</label>
+    <select id="filterCandidate"></select>
+
+    <label for="filterParty">Filtrar por Partido:</label>
+    <select id="filterParty"></select>
+
     <table id="resultsTable">
         <thead>
             <tr>
